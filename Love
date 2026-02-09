@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Love Gift ❤️</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.login-box, .content {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff1e38;
+}
+
+.event {
+    background: rgba(255,255,255,0.25);
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.event img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+h2 {
+    color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box" id="loginBox">
+    <h2>❤️ تسجيل الدخول ❤️</h2>
+    <input type="text" id="username" placeholder="اسم المستخدم">
+    <input type="password" id="password" placeholder="كلمة المرور">
+    <button onclick="login()">دخول</button>
+    <p id="error" style="color: yellow;"></p>
+</div>
+
+<div class="content" id="contentBox" style="display:none;">
+    <h2>ذكرياتنا الجميلة ❤️</h2>
+
+    <div class="event">
+        <h3>7/7/2025 - اول خروجه لينا سوي</h3>
+        <img src="img1.jpg">
+    </div>
+
+    <div class="event">
+        <h3>14/5/2025 - اول مره اتكلمنا</h3>
+        <img src="img2.jpg">
+    </div>
+
+    <div class="event">
+        <h3>16/5/2025 - اول عيد ميلاد ليا مع حبيبتي</h3>
+        <img src="img3.jpg">
+    </div>
+
+    <div class="event">
+        <h3>21/7/2025 - اول عيد ميلاد لحبيبتي معايا</h3>
+        <img src="img4.jpg">
+    </div>
+
+    <div class="event">
+        <h3>9/12/2025 - يوم روحنا الجامعة سوا</h3>
+        <img src="img5.jpg">
+    </div>
+</div>
+
+<script>
+function login() {
+    var user = document.getElementById("username").value;
+    var pass = document.getElementById("password").value;
+
+    if(user === "بحبك" && pass === "21/7") {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("contentBox").style.display = "block";
+    } else {
+        document.getElementById("error").innerText = "اليوزر أو الباسورد غلط ❤️";
+    }
+}
+</script>
+
+</body>
+</html>
